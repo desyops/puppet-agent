@@ -23,6 +23,9 @@ component "virt-what" do |pkg, settings, platform|
     if platform.architecture =~ /ppc64le$/
       host_opt = '--host powerpc64le-unknown-linux-gnu'
     end
+    if platform.architecture =~ /ppc64$/
+      host_opt = '--host powerpc64-unknown-linux-gnu'
+    end
   end
 
   if platform.is_cross_compiled_linux?

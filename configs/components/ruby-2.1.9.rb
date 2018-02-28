@@ -57,6 +57,10 @@ component "ruby-2.1.9" do |pkg, settings, platform|
       :sum => "97f599edab5dec39b3231fc67b7208b5",
       :target_double => "powerpc64le-linux",
     },
+    'ppc64-redhat-linux' => {
+      :sum => "f6faed1c868f9c6fd22359e7ffa151a3",
+      :target_double => "powerpc64-linux",
+    },
     'powerpc64le-suse-linux' => {
       :sum => "ce3b130c6c5eb7ff4e8af5ad2191d1ba",
       :target_double => "powerpc64le-linux",

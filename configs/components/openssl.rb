@@ -68,8 +68,10 @@ component "openssl" do |pkg, settings, platform|
       target = 'linux-aarch64'
     elsif platform.name =~ /debian-8-arm/
       target = 'linux-armv4'
-    elsif platform.architecture =~ /ppc64/
+    elsif platform.architecture =~ /^ppc64le$/
       target = 'linux-ppc64le'
+    elsif platform.architecture =~ /^ppc64$/
+      target = 'linux-ppc64'
     elsif platform.architecture == "s390x"
       target = 'linux64-s390x'
     end
