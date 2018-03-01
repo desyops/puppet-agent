@@ -104,7 +104,7 @@ project "puppet-agent" do |proj|
   platform_triple = "powerpc64le-suse-linux" if platform.architecture == "ppc64le" && platform.name =~ /^sles-/
   platform_triple = "powerpc64le-linux-gnu" if platform.architecture == "ppc64el"
   platform_triple = "s390x-linux-gnu" if platform.architecture == "s390x"
-  platform_triple = "arm-linux-gnueabihf" if platform.name == 'debian-8-armhf'
+  platform_triple = "arm-linux-gnueabihf" if platform.name =~ /debian-8-armhf|debian-9-armhf/
   platform_triple = "arm-linux-gnueabi" if platform.name == 'debian-8-armel'
   platform_triple = "aarch64-redhat-linux" if platform.name == 'el-7-aarch64'
 

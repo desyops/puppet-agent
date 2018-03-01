@@ -21,7 +21,7 @@ component "openssl" do |pkg, settings, platform|
     end
     pkg.build_requires 'pl-gcc'
 
-    if platform.name =~ /debian-8-arm/
+    if platform.name =~ /debian-8-arm|debian-9-armhf/
       pkg.build_requires "xutils-dev"
       pkg.apply_patch 'resources/patches/openssl/openssl-1.0.0l-use-gcc-instead-of-makedepend.patch'
     end
@@ -66,7 +66,7 @@ component "openssl" do |pkg, settings, platform|
 
     if platform.architecture == "aarch64"
       target = 'linux-aarch64'
-    elsif platform.name =~ /debian-8-arm/
+    elsif platform.name =~ /debian-8-arm|debian-9-arm/
       target = 'linux-armv4'
     elsif platform.architecture =~ /^ppc64le$/
       target = 'linux-ppc64le'
